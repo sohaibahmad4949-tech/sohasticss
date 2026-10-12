@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script>(function () { try { var t = localStorage.getItem("ahmedCMS_theme"); if (t) { t = JSON.parse(t); } if (t && t !== "charcoal-orange") { document.documentElement.setAttribute("data-theme", t); } } catch (e) { } })();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sohastics — Web Developer &amp; Software Engineer</title>
+  <meta name="description"
+    content="Sohastics is a professional web developer and software engineer. Turning ideas into fast, reliable web experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ================= BACKGROUND AMBIENCE ================= -->
+  <div class="bg-ambience" aria-hidden="true">
+    <span class="blob blob-orange"></span>
+    <span class="blob blob-blue"></span>
+    <span class="blob blob-orange blob-small"></span>
+    <div class="grain"></div>
+  </div>
+
+  <!-- ================= NAV ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">AHMED<span class="logo-dot">.</span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="websites.html">Websites</a>
+        <a href="awards.html">Awards</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-ghost nav-cta">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-copy reveal-item" data-reveal="left">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>WEB DEVELOPER — BUILD 001</p>
+          <h1 class="hero-name">AHMED</h1>
+          <p class="hero-role">Video Editor <span class="slash">/</span> Content Creator</p>
+          <p class="hero-tagline">&ldquo;Turning raw footage into stories that hook.&rdquo;</p>
+          <div class="hero-actions">
+            <a href="portfolio.html" class="btn btn-primary">
+              <span>View My Work</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#featured" class="btn btn-text">See featured work ↓</a>
+          </div>
+          <div class="hero-meta">
+            <div class="meta-item"><span class="meta-num">05</span><span class="meta-label">Years writing code</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item"><span class="meta-num">120+</span><span class="meta-label">Projects delivered</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-frame reveal-item" data-reveal="right">
+          <div class="frame-monitor">
+            <div class="frame-corner tl"></div>
+            <div class="frame-corner tr"></div>
+            <div class="frame-corner bl"></div>
+            <div class="frame-corner br"></div>
+            <div class="frame-rec"><span class="rec-dot"></span>ONLINE</div>
+            <div class="frame-tc">v1.0.0</div>
+            <div class="photo-wipe" id="photoWipe"></div>
+            <svg class="headshot-placeholder" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" role="img"
+              aria-label="Placeholder profile headshot">
+              <defs>
+                <linearGradient id="hsBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#211c19" />
+                  <stop offset="100%" stop-color="#141110" />
+                </linearGradient>
+                <linearGradient id="hsPerson" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#3a322c" />
+                  <stop offset="100%" stop-color="#2a2420" />
+                </linearGradient>
+              </defs>
+              <rect width="400" height="500" fill="url(#hsBg)" />
+              <circle cx="200" cy="195" r="86" fill="url(#hsPerson)" />
+              <path d="M60 520 C60 380 130 320 200 320 C270 320 340 380 340 520 Z" fill="url(#hsPerson)" />
+              <circle cx="200" cy="195" r="86" fill="none" style="stroke:var(--orange)" stroke-opacity="0.15"
+                stroke-width="1" />
+            </svg>
+            <div class="frame-scanlines"></div>
+          </div>
+          <p class="frame-caption">Photo placeholder — swap via Admin Panel</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section class="stats" id="stats">
+      <div class="section-inner">
+        <div class="stats-grid">
+          <div class="stat-card reveal-item">
+            <span class="stat-number" data-count-to="120" data-suffix="+">0</span>
+            <span class="stat-label">Projects Delivered</span>
+          </div>
+          <div class="stat-card reveal-item">
+            <span class="stat-number" data-count-to="45" data-suffix="+">0</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-card reveal-item">
+            <span class="stat-number" data-count-to="5" data-suffix="">0</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card reveal-item">
+            <span class="stat-number" data-count-to="4.9" data-decimal="1" data-suffix="/5">0</span>
+            <span class="stat-label">Avg. Client Rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES TEASER ================= -->
+    <section class="services" id="services">
+      <div class="section-inner">
+        <div class="section-head reveal-item">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>WHAT I DO</p>
+          <h2 class="section-title">Every cut has a job to do</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal-item">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path d="M4 8a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8Z" stroke="currentColor"
+                  stroke-width="1.6" />
+                <path d="M17 11.5 22 8v10l-5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Video Editing</h3>
+            <p>Narrative-driven cuts that hold attention from frame one.</p>
+          </div>
+          <div class="service-card reveal-item">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path d="M13 3v20M6 8v10M20 8v10M3 12h4M19 12h4" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Short-Form Content</h3>
+            <p>Reels and TikToks engineered to stop the scroll.</p>
+          </div>
+          <div class="service-card reveal-item">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <circle cx="13" cy="13" r="9.5" stroke="currentColor" stroke-width="1.6" />
+                <path d="M9 13.5l2.6 2.6L17.5 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Colour Grading</h3>
+            <p>A consistent, cinematic look that carries your brand.</p>
+          </div>
+          <div class="service-card reveal-item">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path d="M4 20V9m7.5 11V4m7.5 16v-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Sound Design</h3>
+            <p>Mix, SFX and pacing that make every beat land.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED WORK ================= -->
+    <section class="featured" id="featured">
+      <div class="section-inner">
+        <div class="section-head reveal-item">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>SELECTED WORK</p>
+          <h2 class="section-title">Featured Work</h2>
+        </div>
+        <p class="grid-empty-state" id="workGridEmpty" hidden>New projects are being added soon — check back shortly.</p>
+        <div class="work-grid">
+          <a href="portfolio.html" class="work-card reveal-item" style="--tone:var(--orange)">
+            <div class="work-thumb">
+              <div class="thumb-corner tl"></div>
+              <div class="thumb-corner br"></div>
+              <span class="thumb-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">00:12</span>
+            </div>
+            <div class="work-info">
+              <h3>Brand Launch Film</h3>
+              <p>Commercial · 2:14</p>
+            </div>
+          </a>
+          <a href="portfolio.html" class="work-card reveal-item" style="--tone:var(--blue)">
+            <div class="work-thumb">
+              <div class="thumb-corner tl"></div>
+              <div class="thumb-corner br"></div>
+              <span class="thumb-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">00:47</span>
+            </div>
+            <div class="work-info">
+              <h3>Travel Reel Series</h3>
+              <p>Short-form · 0:32</p>
+            </div>
+          </a>
+          <a href="portfolio.html" class="work-card reveal-item" style="--tone:var(--orange)">
+            <div class="work-thumb">
+              <div class="thumb-corner tl"></div>
+              <div class="thumb-corner br"></div>
+              <span class="thumb-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">01:03</span>
+            </div>
+            <div class="work-info">
+              <h3>Product Documentary</h3>
+              <p>Branded · 4:20</p>
+            </div>
+          </a>
+          <a href="portfolio.html" class="work-card reveal-item" style="--tone:var(--blue)">
+            <div class="work-thumb">
+              <div class="thumb-corner tl"></div>
+              <div class="thumb-corner br"></div>
+              <span class="thumb-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">00:25</span>
+            </div>
+            <div class="work-info">
+              <h3>Music Video Edit</h3>
+              <p>Music · 3:05</p>
+            </div>
+          </a>
+          <a href="portfolio.html" class="work-card reveal-item" style="--tone:var(--orange)">
+            <div class="work-thumb">
+              <div class="thumb-corner tl"></div>
+              <div class="thumb-corner br"></div>
+              <span class="thumb-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">00:58</span>
+            </div>
+            <div class="work-info">
+              <h3>Podcast Highlights</h3>
+              <p>Short-form · 0:41</p>
+            </div>
+          </a>
+          <a href="portfolio.html" class="work-card reveal-item" style="--tone:var(--blue)">
+            <div class="work-thumb">
+              <div class="thumb-corner tl"></div>
+              <div class="thumb-corner br"></div>
+              <span class="thumb-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">00:33</span>
+            </div>
+            <div class="work-info">
+              <h3>Event Recap Film</h3>
+              <p>Event · 2:48</p>
+            </div>
+          </a>
+        </div>
+        <div class="work-cta reveal-item">
+          <a href="portfolio.html" class="btn btn-primary">
+            <span>View Full Portfolio</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WEBSITES FOR SALE (TEASER) ================= -->
+    <section class="websites-sale" id="websites-for-sale">
+      <div class="section-inner">
+        <div class="section-head reveal-item">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>WEBSITES FOR SALE</p>
+          <h2 class="section-title">Ready-made websites, built and waiting</h2>
+        </div>
+        <div class="websites-grid" id="websitesTeaserGrid"></div>
+        <p class="websites-note reveal-item" id="websitesTeaserEmpty" hidden>New listings are being added soon —
+          check back shortly or browse the full catalogue.</p>
+        <div class="work-cta reveal-item">
+          <a href="websites.html" class="btn btn-primary">
+            <span>Browse All Websites</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="testimonials" id="testimonials">
+      <div class="section-inner">
+        <div class="section-head reveal-item testi-section-head">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span>CLIENT WORDS</p>
+            <h2 class="section-title">What clients say</h2>
+          </div>
+          <button type="button" class="btn btn-ghost" id="openReviewModalBtn">
+            <span>Write a Review</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M11.5 2.5 13.5 4.5 5 13H3v-2l8.5-8.5Z" stroke="currentColor" stroke-width="1.5"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="testi-wrap reveal-item">
+          <div class="testi-track" id="testiTrack"></div>
+          <div class="testi-controls">
+            <button class="testi-arrow" id="testiPrev" aria-label="Previous testimonial">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="testi-dots" id="testiDots"></div>
+            <button class="testi-arrow" id="testiNext" aria-label="Next testimonial">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BRANDS MARQUEE ================= -->
+
+
+    <!-- ================= CLOSING CTA ================= -->
+    <section class="closing-cta" id="contact-cta">
+      <div class="section-inner reveal-item">
+        <p class="eyebrow eyebrow-center"><span class="eyebrow-dot"></span>NEXT PROJECT</p>
+        <h2 class="cta-title">Got an idea stuck in a notebook?</h2>
+        <p class="cta-sub">Let's build it into something people can actually use.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          <span>Start a Project</span>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= WRITE A REVIEW MODAL ================= -->
+  <div class="lightbox review-modal" id="reviewModal" role="dialog" aria-modal="true" aria-labelledby="reviewModalTitle"
+    hidden>
+    <div class="lightbox-backdrop" id="reviewModalBackdrop"></div>
+    <div class="lightbox-panel review-modal-panel">
+      <button class="lightbox-close" id="reviewModalClose" aria-label="Close review form">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M4 4l10 10M14 4 4 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <div class="lightbox-body review-modal-body">
+        <p class="eyebrow" id="reviewModalTitle"><span class="eyebrow-dot"></span>WRITE A REVIEW</p>
+        <h3>Share your experience</h3>
+        <p class="review-modal-sub">Worked with me on a project? I'd love to hear how it went — approved reviews appear
+          right here on the homepage.</p>
+
+        <form class="contact-form review-form" id="reviewForm" novalidate>
+          <div class="form-row">
+            <label for="reviewName">Your Name</label>
+            <input type="text" id="reviewName" name="reviewName" placeholder="Full name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="reviewRatingGroup">Your Rating</label>
+            <div class="star-rating-input" id="reviewRatingGroup" role="radiogroup" aria-label="Rating out of 5">
+              <button type="button" class="star-btn" data-value="1" aria-label="1 star"><svg width="26" height="26"
+                  viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3.5 14.3 9l6 .6-4.5 4 1.4 5.9L12 16.7 6.8 19.5 8.2 13.6 3.7 9.6l6-.6 2.3-5.5Z"
+                    stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg></button>
+              <button type="button" class="star-btn" data-value="2" aria-label="2 stars"><svg width="26" height="26"
+                  viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3.5 14.3 9l6 .6-4.5 4 1.4 5.9L12 16.7 6.8 19.5 8.2 13.6 3.7 9.6l6-.6 2.3-5.5Z"
+                    stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg></button>
+              <button type="button" class="star-btn" data-value="3" aria-label="3 stars"><svg width="26" height="26"
+                  viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3.5 14.3 9l6 .6-4.5 4 1.4 5.9L12 16.7 6.8 19.5 8.2 13.6 3.7 9.6l6-.6 2.3-5.5Z"
+                    stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg></button>
+              <button type="button" class="star-btn" data-value="4" aria-label="4 stars"><svg width="26" height="26"
+                  viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3.5 14.3 9l6 .6-4.5 4 1.4 5.9L12 16.7 6.8 19.5 8.2 13.6 3.7 9.6l6-.6 2.3-5.5Z"
+                    stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg></button>
+              <button type="button" class="star-btn" data-value="5" aria-label="5 stars"><svg width="26" height="26"
+                  viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3.5 14.3 9l6 .6-4.5 4 1.4 5.9L12 16.7 6.8 19.5 8.2 13.6 3.7 9.6l6-.6 2.3-5.5Z"
+                    stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg></button>
+            </div>
+            <input type="hidden" id="reviewRatingValue" value="0">
+          </div>
+
+          <div class="form-row">
+            <label for="reviewMessage">Your Review</label>
+            <textarea id="reviewMessage" name="reviewMessage" rows="4" placeholder="What was it like working together?"
+              required></textarea>
+          </div>
+
+          <input type="text" id="reviewWebsite" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="form-error" id="reviewError" role="alert" hidden></p>
+          <button type="submit" class="btn btn-primary form-submit">
+            <span>Submit Review</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </form>
+
+        <div class="form-success review-success" id="reviewSuccess" hidden>
+          <div class="form-success-icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6" />
+              <path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Thank you!</h3>
+          <p>Your review has been submitted and will appear here once it's approved.</p>
+          <button type="button" class="btn btn-ghost" id="reviewModalDoneBtn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">AHMED<span class="logo-dot">.</span></a>
+        <p>Web Developer &amp; Software Engineer based worldwide. Turning ideas into fast, reliable web experiences.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="websites.html">Websites</a>
+        <a href="awards.html">Awards</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="portfolio.html">Web Applications</a>
+        <a href="portfolio.html">Landing Pages</a>
+        <a href="portfolio.html">E-commerce</a>
+        <a href="portfolio.html">Backend Systems</a>
+      </div>
+      <div class="footer-social">
+        <h4>Follow</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="YouTube" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <rect x="2.5" y="5.5" width="19" height="13" rx="4" stroke="currentColor" stroke-width="1.6" />
+              <path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="LinkedIn" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="8" cy="8.5" r="1.1" fill="currentColor" />
+              <path d="M8 11v6M12 11v6M12 13.5c0-1.5 1-2.5 2.3-2.5S16.5 12 16.5 13.5V17" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 <span class="site-copyright-name">Ahmed</span>. All rights reserved.</span>
+      <span class="footer-tc" id="footerClock">TIMECODE 00:00:00:00</span>
+    </div>
+  </footer>
+
+  <script src="js/api-config.js"></script>
+  <script src="js/api-client.js"></script>
+  <script src="js/cms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

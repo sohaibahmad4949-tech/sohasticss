@@ -1,0 +1,334 @@
+{
+  "theme": "charcoal-orange",
+  "content": {
+    "global": {
+      "siteName": "Sohastics"
+    },
+    "home": {
+      "heroRoleLeft": "Web Developer",
+      "heroRoleRight": "Software Engineer",
+      "heroTagline": "Turning ideas into fast, reliable web experiences.",
+      "statsVideos": "120",
+      "statsClients": "45",
+      "statsYears": "5",
+      "statsRating": "4.9",
+      "servicesSectionTitle": "Every project starts with clean code",
+      "ctaTitle": "Got an idea stuck in a notebook?",
+      "ctaSub": "Let's build it into something people can actually use.",
+      "showBrands": true
+    },
+    "portfolio": {
+      "pageTitle": "Full Portfolio",
+      "pageSub": "Every project below is real client work, organised the way I actually build — by project type, not by date."
+    },
+    "services": {
+      "pageTitle": "What I Can Build For You",
+      "pageSub": "Straightforward services, straightforward pricing. Every project starts with a quick chat about your goals and requirements.",
+      "note": "Final pricing depends on project scope, complexity, and timeline — every quote is confirmed before work begins."
+    },
+    "awards": {
+      "pageTitle": "Recognition Along the Way",
+      "pageSub": "A few milestones from five years behind the keyboard — not the goal, but good markers of the work paying off."
+    },
+    "about": {
+      "pageTitle": "Started on Weekends. Never Stopped.",
+      "paragraphs": [
+        {
+          "text": "I started coding five years ago as a hobby — teaching myself to build a friend's website on weekends, just to see if I could make it better. I could.",
+          "highlight": false
+        },
+        {
+          "text": "Somewhere along the way I fell in love with the craft itself: solving problems, building clean interfaces, and architecting systems that just work. What started as a favour for a friend turned into a full-time career.",
+          "highlight": false
+        },
+        {
+          "text": "What makes me different is that I don't just write code — I build products that solve real problems and are built to last.",
+          "highlight": true
+        },
+        {
+          "text": "My mission is simple: help businesses turn ideas into fast, reliable, well-built web products that actually grow their audience.",
+          "highlight": false
+        }
+      ]
+    },
+    "contact": {
+      "pageTitle": "Let's Start Building",
+      "pageSub": "Reach out for web development or ongoing support projects — I read and reply to every message myself."
+    }
+  },
+  "services": [
+    {
+      "id": "svc1",
+      "icon": "film",
+      "title": "Website Development",
+      "desc": "Custom-built websites using modern frameworks — fast, responsive, and built to convert visitors into customers.",
+      "price": "300",
+      "unit": "/project"
+    },
+    {
+      "id": "svc2",
+      "icon": "phone",
+      "title": "Web Application Development",
+      "desc": "Full-stack web apps with clean architecture, from database design to a polished front-end interface.",
+      "price": "800",
+      "unit": "/project"
+    },
+    {
+      "id": "svc3",
+      "icon": "grade",
+      "title": "API & Backend Development",
+      "desc": "RESTful APIs, database design, and backend logic that scales cleanly as your product grows.",
+      "price": "400",
+      "unit": "/project"
+    },
+    {
+      "id": "svc4",
+      "icon": "calendar",
+      "title": "Website Maintenance & Support",
+      "desc": "Ongoing updates, bug fixes, performance monitoring, and support so your site never falls behind.",
+      "price": "150",
+      "unit": "/month"
+    }
+  ],
+  "awards": [
+    {
+      "id": "aw1",
+      "year": "2024",
+      "title": "Best Developer Award",
+      "org": "Local Tech Meetup",
+      "desc": "Recognized for building the most technically impressive project at a community hackathon.",
+      "icon": "trophy"
+    },
+    {
+      "id": "aw2",
+      "year": "2023",
+      "title": "Open Source Contributor",
+      "org": "Featured on GitHub",
+      "desc": "Spotlighted for consistent contributions to popular open-source developer tools.",
+      "icon": "star"
+    },
+    {
+      "id": "aw3",
+      "year": "2022",
+      "title": "Guest Speaker",
+      "org": "University Tech Seminar",
+      "desc": "Invited to speak on breaking into web development — sharing the real path from first line of code to full-time client work.",
+      "icon": "mic"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "ms1",
+      "year": "Year 1",
+      "title": "Wrote My First Line of Code",
+      "desc": "Taught myself to code as a hobby, tinkering with a friend's website on weekends.",
+      "icon": "play"
+    },
+    {
+      "id": "ms2",
+      "year": "Year 2",
+      "title": "First Paid Client",
+      "desc": "Took on my first freelance web project and realised this could be more than a hobby.",
+      "icon": "compass"
+    },
+    {
+      "id": "ms3",
+      "year": "Year 3",
+      "title": "Shipped 50+ Projects",
+      "desc": "Hit the 50-project mark and started refining a real development workflow.",
+      "icon": "film"
+    },
+    {
+      "id": "ms4",
+      "year": "Year 4",
+      "title": "Started Building Full Products",
+      "desc": "Moved from single pages to complete web applications for long-term clients.",
+      "icon": "calendar"
+    },
+    {
+      "id": "ms5",
+      "year": "Year 5",
+      "title": "120+ Projects, 45+ Clients",
+      "desc": "Today — 120+ projects shipped, 45+ happy clients, and a 4.9 average rating along the way.",
+      "icon": "star"
+    }
+  ],
+  "skills": [
+    {
+      "id": "sk1",
+      "name": "Frontend Development",
+      "value": 95
+    },
+    {
+      "id": "sk2",
+      "name": "Backend Development",
+      "value": 88
+    },
+    {
+      "id": "sk3",
+      "name": "Database Design",
+      "value": 85
+    },
+    {
+      "id": "sk4",
+      "name": "API Integration",
+      "value": 90
+    },
+    {
+      "id": "sk5",
+      "name": "UI/UX Implementation",
+      "value": 92
+    }
+  ],
+  "portfolio": [],
+  "contactInfo": {
+    "email": "ahmed.editz@gmail.com",
+    "whatsapp": "",
+    "instagram": "#",
+    "youtube": "#"
+  },
+  "images": {
+    "homePhoto": null,
+    "aboutPhoto": null
+  },
+  "submissions": [],
+  "reviews": [],
+  "pages": {
+    "home": true,
+    "portfolio": true,
+    "services": true,
+    "awards": true,
+    "about": true,
+    "contact": true,
+    "websites": true
+  },
+  "websites": [],
+  "seo": {
+    "global": {
+      "siteUrl": "",
+      "brandName": "Sohastics",
+      "titleSuffix": "| Sohastics",
+      "defaultTitle": "Sohastics — Web Developer & Software Engineer",
+      "defaultDescription": "Sohastics is a web developer and software engineer building fast, reliable websites, web applications and APIs for clients worldwide.",
+      "defaultKeywords": [
+        "web developer",
+        "software engineer",
+        "website development",
+        "web application development",
+        "freelance developer"
+      ],
+      "ogImage": "",
+      "author": "Sohastics",
+      "jobTitle": "Web Developer & Software Engineer",
+      "entityType": "Person",
+      "knowsAbout": "HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Node.js, REST APIs",
+      "addressLocality": "",
+      "addressCountry": "",
+      "geoRegion": "",
+      "currency": "USD",
+      "lang": "en",
+      "locale": "en_US",
+      "themeColor": "#FF5A1F",
+      "twitterHandle": "",
+      "gaId": "",
+      "googleVerification": "",
+      "bingVerification": "",
+      "robotsIndex": true,
+      "structuredData": true,
+      "sitemapChangefreq": "monthly"
+    },
+    "pages": {
+      "home": {
+        "title": "Web Developer & Software Engineer",
+        "description": "Custom websites, web applications and APIs built by Sohastics — clean code, fast load times, and designs that turn visitors into customers.",
+        "keywords": [
+          "hire web developer",
+          "freelance web developer",
+          "custom website"
+        ],
+        "ogImage": "",
+        "canonical": "",
+        "noindex": false,
+        "priority": "1.0"
+      },
+      "portfolio": {
+        "title": "Portfolio — Web Development Projects",
+        "description": "Browse real client work by Sohastics: business websites, web applications, landing pages and backend systems, organised by project type.",
+        "keywords": [
+          "web developer portfolio",
+          "website projects",
+          "case studies"
+        ],
+        "ogImage": "",
+        "canonical": "",
+        "noindex": false,
+        "priority": "0.9"
+      },
+      "services": {
+        "title": "Web Development Services & Pricing",
+        "description": "Website development, web apps, API and backend work, plus ongoing maintenance — straightforward services with transparent starting prices.",
+        "keywords": [
+          "web development services",
+          "website pricing",
+          "api development"
+        ],
+        "ogImage": "",
+        "canonical": "",
+        "noindex": false,
+        "priority": "0.9"
+      },
+      "websites": {
+        "title": "Ready-Made Websites For Sale",
+        "description": "Buy pre-built business, e-commerce, portfolio and landing page websites — preview each one on video and get it live fast.",
+        "keywords": [
+          "websites for sale",
+          "ready made website",
+          "buy a website"
+        ],
+        "ogImage": "",
+        "canonical": "",
+        "noindex": false,
+        "priority": "0.8"
+      },
+      "awards": {
+        "title": "Awards & Achievements",
+        "description": "Awards, recognitions and speaking milestones earned by Sohastics across five years of professional web development work.",
+        "keywords": [
+          "developer awards",
+          "achievements",
+          "recognition"
+        ],
+        "ogImage": "",
+        "canonical": "",
+        "noindex": false,
+        "priority": "0.6"
+      },
+      "about": {
+        "title": "About Sohastics — Web Developer",
+        "description": "The story behind Sohastics: from weekend hobby projects to full-time web development, and the skills built along the way.",
+        "keywords": [
+          "about",
+          "web developer story",
+          "developer skills"
+        ],
+        "ogImage": "",
+        "canonical": "",
+        "noindex": false,
+        "priority": "0.7"
+      },
+      "contact": {
+        "title": "Contact — Start a Web Project",
+        "description": "Get in touch with Sohastics for website development, web applications, API work or ongoing maintenance. Every message gets a personal reply.",
+        "keywords": [
+          "contact web developer",
+          "hire developer",
+          "get a quote"
+        ],
+        "ogImage": "",
+        "canonical": "",
+        "noindex": false,
+        "priority": "0.7"
+      }
+    }
+  }
+}

@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("ahmedCMS_theme");if(t){t=JSON.parse(t);}if(t&&t!=="charcoal-orange"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel — Sohastics</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<div class="bg-ambience" aria-hidden="true">
+  <span class="blob blob-orange"></span>
+  <span class="blob blob-blue"></span>
+  <div class="grain"></div>
+</div>
+
+<!-- ================= LOGIN SCREEN ================= -->
+<div class="login-screen" id="loginScreen">
+  <div class="login-card">
+    <div class="login-logo">AHMED<span class="logo-dot">.</span></div>
+    <p class="login-badge">Admin Panel</p>
+
+    <form class="login-form" id="loginForm">
+      <div class="form-row">
+        <label for="loginUsername" id="loginUsernameLabel">Username or email</label>
+        <input type="text" id="loginUsername" name="username" autocomplete="username" required>
+      </div>
+      <div class="form-row">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="password" autocomplete="current-password" required>
+      </div>
+      <p class="login-error" id="loginError" role="alert">Incorrect username or password. Try again.</p>
+      <button type="submit" class="btn btn-primary login-submit">
+        <span id="loginSubmitLabel">Log In</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+
+  </div>
+</div>
+
+<!-- ================= DASHBOARD ================= -->
+<div class="admin-shell" id="dashboard" hidden>
+  <aside class="admin-sidebar">
+    <a href="/" class="logo" target="_blank" rel="noopener" data-site-link>AHMED<span class="logo-dot">.</span></a>
+    <nav class="admin-nav" id="adminNav">
+      <button class="admin-nav-item is-active" data-section="overview">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="7.5" height="7.5" rx="1.6" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3.5" width="7.5" height="7.5" rx="1.6" stroke="currentColor" stroke-width="1.6"/><rect x="3.5" y="13" width="7.5" height="7.5" rx="1.6" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="7.5" height="7.5" rx="1.6" stroke="currentColor" stroke-width="1.6"/></svg>
+        Dashboard
+      </button>
+      <button class="admin-nav-item" data-section="home">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 4l8 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9.5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Home Page
+      </button>
+      <button class="admin-nav-item" data-section="portfolio">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 15.5 8.5 11l3 3 4-4.5 5 6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        Portfolio Projects
+      </button>
+      <button class="admin-nav-item" data-section="services">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 8a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8Z" stroke="currentColor" stroke-width="1.6"/><path d="M17 11.5 22 8v10l-5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        Services &amp; Pricing
+      </button>
+      <button class="admin-nav-item" data-section="websites">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4.5" width="18" height="15" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 8.5h18" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="6.5" r="0.6" fill="currentColor"/><circle cx="8" cy="6.5" r="0.6" fill="currentColor"/><path d="M8.5 15.5 11 13l1.8 1.8L15.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Websites For Sale
+      </button>
+      <button class="admin-nav-item" data-section="awards">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z" stroke="currentColor" stroke-width="1.6"/><path d="M12 14v3M9 20h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Awards
+      </button>
+      <button class="admin-nav-item" data-section="about">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 20c1-3.8 4-5.8 6.5-5.8s5.5 2 6.5 5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        About Page
+      </button>
+      <button class="admin-nav-item" data-section="contact">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.4" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Contact Info
+      </button>
+      <button class="admin-nav-item" data-section="messages">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6.5h16v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5v-11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4.5 7l7.5 6 7.5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Messages
+        <span class="nav-badge" id="navMsgBadge" hidden>0</span>
+      </button>
+      <button class="admin-nav-item" data-section="reviews">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3.5 14.3 9l6 .6-4.5 4 1.4 5.9L12 16.7 6.8 19.5 8.2 13.6 3.7 9.6l6-.6 2.3-5.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        Testimonials
+        <span class="nav-badge" id="navReviewBadge" hidden>0</span>
+      </button>
+      <button class="admin-nav-item" data-section="images">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="4.5" width="17" height="15" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M4 17l5-4.5 3.5 3L16 12l4 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        Photos
+      </button>
+      <button class="admin-nav-item" data-section="media">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="4.5" width="17" height="15" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 9.5v5l4.5-2.5-4.5-2.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        Media Library
+      </button>
+      <button class="admin-nav-item" data-section="theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.5v17M3.5 12h17" stroke="currentColor" stroke-width="1.6" stroke-opacity="0.5"/></svg>
+        Theme
+      </button>
+      <button class="admin-nav-item" data-section="analytics">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M11 20V4M18 20v-7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="18" cy="7.5" r="2.3" stroke="currentColor" stroke-width="1.6"/></svg>
+        Analytics
+        <span class="nav-badge nav-badge-live" id="navLiveBadge" hidden>0</span>
+      </button>
+      <button class="admin-nav-item" data-section="seo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 11.5l2 2 4-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        SEO
+        <span class="nav-badge nav-badge-score" id="navSeoBadge" hidden>0</span>
+      </button>
+      <button class="admin-nav-item" data-section="pages">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="4" width="17" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 9h17M9 9v11" stroke="currentColor" stroke-width="1.6"/></svg>
+        Page Visibility
+      </button>
+      <button class="admin-nav-item" data-section="activity">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3.5 12h4l2.5-6 4 12 2.5-6h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Activity Log
+      </button>
+      <div class="admin-nav-divider"></div>
+      <button class="admin-nav-item" data-section="settings">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.5-2-3.4-2.3.9a7 7 0 0 0-2-1.2L14.2 3H9.8l-.4 2.6a7 7 0 0 0-2 1.2l-2.3-.9-2 3.4 2 1.5A7 7 0 0 0 5 12c0 .4 0 .8.1 1.2l-2 1.5 2 3.4 2.3-.9c.6.5 1.3.9 2 1.2l.4 2.6h4.4l.4-2.6a7 7 0 0 0 2-1.2l2.3.9 2-3.4-2-1.5c.1-.4.1-.8.1-1.2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        Settings
+      </button>
+      <button class="admin-nav-item" data-section="profile">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.6" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 20c.9-4 4-6 7.5-6s6.6 2 7.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Admin Profile
+      </button>
+    </nav>
+    <div class="admin-sidebar-footer">
+      <a href="/" target="_blank" rel="noopener" class="admin-view-live" data-site-link>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3H3.5a1 1 0 0 0-1 1v8.5a1 1 0 0 0 1 1H12a1 1 0 0 0 1-1V10M9 3h4v4M13 3 7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        View Live Site
+      </a>
+      <button class="admin-logout" id="logoutBtn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 14H3.5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1H6M10.5 11 14 8l-3.5-3M14 8H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Log Out
+      </button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1 class="admin-topbar-title" id="topbarTitle">Dashboard</h1>
+      <div class="save-status"><span class="save-status-dot" id="saveDot"></span><span id="saveStatusText">Ready</span></div>
+    </div>
+
+    <div class="admin-content">
+
+      <!-- OVERVIEW -->
+      <section class="admin-section" id="section-overview">
+        <div class="overview-grid" id="overviewGrid"><p class="admin-empty">Loading dashboard…</p></div>
+        <div class="dash-columns" id="overviewRecent"></div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Quick Access</h2>
+          <p class="admin-card-sub">Jump straight to what you want to manage.</p>
+          <div class="overview-links">
+            <button class="overview-link-card" data-goto="analytics"><h4>Analytics</h4><p>Live visitors &amp; site traffic</p></button>
+            <button class="overview-link-card" data-goto="home"><h4>Home Page</h4><p>Hero text, stats, CTA</p></button>
+            <button class="overview-link-card" data-goto="portfolio"><h4>Portfolio</h4><p>Add, edit, remove projects</p></button>
+            <button class="overview-link-card" data-goto="services"><h4>Services</h4><p>Pricing &amp; descriptions</p></button>
+            <button class="overview-link-card" data-goto="websites"><h4>Websites For Sale</h4><p>Add listings with price &amp; video</p></button>
+            <button class="overview-link-card" data-goto="awards"><h4>Awards</h4><p>Achievements timeline</p></button>
+            <button class="overview-link-card" data-goto="about"><h4>About Page</h4><p>Story, milestones, skills</p></button>
+            <button class="overview-link-card" data-goto="contact"><h4>Contact Info</h4><p>Email, WhatsApp, socials</p></button>
+            <button class="overview-link-card" data-goto="messages"><h4>Messages</h4><p>Contact form submissions &amp; analytics</p></button>
+            <button class="overview-link-card" data-goto="reviews"><h4>Testimonials</h4><p>Approve reviews for the Home page</p></button>
+            <button class="overview-link-card" data-goto="media"><h4>Media Library</h4><p>Uploaded images &amp; videos</p></button>
+            <button class="overview-link-card" data-goto="activity"><h4>Activity Log</h4><p>Who changed what, and when</p></button>
+            <button class="overview-link-card" data-goto="images"><h4>Photos</h4><p>Profile photos site-wide</p></button>
+            <button class="overview-link-card" data-goto="theme"><h4>Theme</h4><p>Switch the whole site's colours</p></button>
+            <button class="overview-link-card" data-goto="seo"><h4>SEO</h4><p>Tags, meta, sitemap &amp; search ranking</p></button>
+            <button class="overview-link-card" data-goto="pages"><h4>Page Visibility</h4><p>Enable or disable site pages</p></button>
+            <button class="overview-link-card" data-goto="settings"><h4>Settings</h4><p>Site name, backup, system info</p></button>
+            <button class="overview-link-card" data-goto="profile"><h4>Admin Profile</h4><p>Username, email &amp; password</p></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOME PAGE -->
+      <section class="admin-section" id="section-home" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Hero Section</h2>
+          <p class="admin-card-sub">The first thing visitors see on the Home page.</p>
+          <form class="admin-form" id="formHome">
+            <div class="admin-form-row-group">
+              <div><label for="homeRoleLeft">Role (left of slash)</label><input type="text" id="homeRoleLeft"></div>
+              <div><label for="homeRoleRight">Role (right of slash)</label><input type="text" id="homeRoleRight"></div>
+            </div>
+            <div><label for="homeTagline">Tagline</label><input type="text" id="homeTagline"></div>
+            <div class="admin-form-row-group">
+              <div><label for="homeStatsVideos">Videos Edited (number)</label><input type="text" id="homeStatsVideos"></div>
+              <div><label for="homeStatsClients">Happy Clients (number)</label><input type="text" id="homeStatsClients"></div>
+            </div>
+            <div class="admin-form-row-group">
+              <div><label for="homeStatsYears">Years Experience</label><input type="text" id="homeStatsYears"></div>
+              <div><label for="homeStatsRating">Avg. Rating (e.g. 4.9)</label><input type="text" id="homeStatsRating"></div>
+            </div>
+            <div><label for="homeServicesTitle">"What I Do" Section Title</label><input type="text" id="homeServicesTitle"></div>
+            <div><label for="homeCtaTitle">Closing CTA Title</label><input type="text" id="homeCtaTitle"></div>
+            <div><label for="homeCtaSub">Closing CTA Subtext</label><input type="text" id="homeCtaSub"></div>
+            <div style="margin: 14px 0; padding: 14px 16px; background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius-md);">
+              <label style="display:inline-flex; align-items:center; gap:12px; cursor:pointer; font-size:14.5px; font-weight:500; color:var(--text); width:100%;">
+                <input type="checkbox" id="homeShowBrands" style="width:18px; height:18px; accent-color:var(--orange); cursor:pointer;">
+                <span>Show "Worked With" (Brands Marquee) Section on Home Page</span>
+              </label>
+            </div>
+            <div class="admin-form-actions">
+              <button type="submit" class="btn btn-primary">Save Home Page</button>
+            </div>
+          </form>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Featured Work</h2>
+          <p class="admin-card-sub">The Home page automatically shows at least 6 of your Portfolio projects: ones marked "Pin to top of Home page" come first, then your newest projects fill the rest. Manage them under Portfolio Projects.</p>
+          <div class="admin-form-actions"><button type="button" class="btn btn-ghost" data-goto="portfolio">Go to Portfolio Projects</button></div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section class="admin-section" id="section-portfolio" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Portfolio Projects</h2>
+          <p class="admin-card-sub">Shown on the full Portfolio page. Toggle "Featured" to also show a project in the Home page's Featured Work grid. Each project can have a video — upload a file or paste a YouTube link.</p>
+          <div id="portfolioEditFormWrap"></div>
+          <div class="admin-list" id="portfolioList"></div>
+          <div class="admin-form-actions">
+            <button type="button" class="btn btn-primary" id="btnAddPortfolio">+ Add New Project</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="admin-section" id="section-services" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Page Text</h2>
+          <form class="admin-form" id="formServicesText">
+            <div><label for="servicesPageTitle">Page Title</label><input type="text" id="servicesPageTitle"></div>
+            <div><label for="servicesPageSub">Page Subtext</label><input type="text" id="servicesPageSub"></div>
+            <div><label for="servicesNote">Pricing Note</label><input type="text" id="servicesNote"></div>
+            <div class="admin-form-actions"><button type="submit" class="btn btn-primary">Save Page Text</button></div>
+          </form>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Services</h2>
+          <p class="admin-card-sub">Add, edit, or remove services — including price — at any time.</p>
+          <div id="servicesEditFormWrap"></div>
+          <div class="admin-list" id="servicesList"></div>
+          <div class="admin-form-actions">
+            <button type="button" class="btn btn-primary" id="btnAddService">+ Add New Service</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- WEBSITES FOR SALE -->
+      <section class="admin-section" id="section-websites" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Websites For Sale</h2>
+          <p class="admin-card-sub">Add, edit, or remove ready-made websites shown on the public "Websites" page. The Home page shows at least 6 of them (pinned ones first, then your newest). Each listing can include a category, price, description, thumbnail image, and a preview video (upload a video file, or paste a YouTube link / direct video URL).</p>
+          <div id="websitesEditFormWrap"></div>
+          <div class="admin-list" id="websitesList"></div>
+          <div class="admin-form-actions">
+            <button type="button" class="btn btn-primary" id="btnAddWebsite">+ Add New Website</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- AWARDS -->
+      <section class="admin-section" id="section-awards" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Page Text</h2>
+          <form class="admin-form" id="formAwardsText">
+            <div><label for="awardsPageTitle">Page Title</label><input type="text" id="awardsPageTitle"></div>
+            <div><label for="awardsPageSub">Page Subtext</label><input type="text" id="awardsPageSub"></div>
+            <div class="admin-form-actions"><button type="submit" class="btn btn-primary">Save Page Text</button></div>
+          </form>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Awards &amp; Achievements</h2>
+          <p class="admin-card-sub">Shown as the timeline on the Awards page.</p>
+          <div id="awardsEditFormWrap"></div>
+          <div class="admin-list" id="awardsList"></div>
+          <div class="admin-form-actions">
+            <button type="button" class="btn btn-primary" id="btnAddAward">+ Add New Award</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="admin-section" id="section-about" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Page Title &amp; Story</h2>
+          <form class="admin-form" id="formAboutText">
+            <div><label for="aboutPageTitle">Page Title</label><input type="text" id="aboutPageTitle"></div>
+            <div id="aboutParagraphsWrap"></div>
+            <div class="admin-form-actions">
+              <button type="button" class="btn btn-ghost" id="btnAddParagraph">+ Add Paragraph</button>
+              <button type="submit" class="btn btn-primary">Save About Text</button>
+            </div>
+          </form>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Key Milestones</h2>
+          <p class="admin-card-sub">The animated timeline on the About page.</p>
+          <div id="milestonesEditFormWrap"></div>
+          <div class="admin-list" id="milestonesList"></div>
+          <div class="admin-form-actions">
+            <button type="button" class="btn btn-primary" id="btnAddMilestone">+ Add Milestone</button>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Core Skills</h2>
+          <p class="admin-card-sub">Shown as animated skill meters.</p>
+          <div id="skillsEditFormWrap"></div>
+          <div class="admin-list" id="skillsList"></div>
+          <div class="admin-form-actions">
+            <button type="button" class="btn btn-primary" id="btnAddSkill">+ Add Skill</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="admin-section" id="section-contact" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Page Text</h2>
+          <form class="admin-form" id="formContactText">
+            <div><label for="contactPageTitle">Page Title</label><input type="text" id="contactPageTitle"></div>
+            <div><label for="contactPageSub">Invite Line (above the form)</label><input type="text" id="contactPageSub"></div>
+            <div class="admin-form-actions"><button type="submit" class="btn btn-primary">Save Page Text</button></div>
+          </form>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Contact Details</h2>
+          <p class="admin-card-sub">Updates the email, WhatsApp, and social icons everywhere they appear on the site — including the footer on every page.</p>
+          <form class="admin-form" id="formContactInfo">
+            <div><label for="infoEmail">Email Address</label><input type="email" id="infoEmail"></div>
+            <div>
+              <label for="infoWhatsapp">WhatsApp Number</label>
+              <input type="text" id="infoWhatsapp" placeholder="e.g. +1 555 123 4567 — leave blank for &quot;available on request&quot;">
+              <p class="admin-inline-hint">Enter a full number with country code to make it clickable. Leave blank to show "Available on request" instead.</p>
+            </div>
+            <div class="admin-form-row-group">
+              <div><label for="infoInstagram">Instagram URL</label><input type="text" id="infoInstagram" placeholder="https://instagram.com/yourhandle"></div>
+              <div><label for="infoYoutube">YouTube URL</label><input type="text" id="infoYoutube" placeholder="https://youtube.com/@yourchannel"></div>
+            </div>
+            <div class="admin-form-actions"><button type="submit" class="btn btn-primary">Save Contact Details</button></div>
+          </form>
+        </div>
+      </section>
+
+      <!-- MESSAGES -->
+      <section class="admin-section" id="section-messages" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Contact Form Analytics</h2>
+          <p class="admin-card-sub">Every message submitted through your live Contact page is saved to the database and appears here.</p>
+          <div class="overview-grid" id="msgStatsGrid"></div>
+
+          <p class="analytics-section-title">By Project Type</p>
+          <div class="breakdown-list" id="msgByType"></div>
+
+          <p class="analytics-section-title">By Budget Range</p>
+          <div class="breakdown-list" id="msgByBudget"></div>
+
+          <p class="analytics-section-title">Submissions — Last 14 Days</p>
+          <div class="trend-chart" id="msgTrendChart"></div>
+        </div>
+
+        <div class="admin-card">
+          <div class="msg-inbox-head">
+            <div>
+              <h2 class="admin-card-title" style="margin-bottom:4px;">Inbox <span class="source-badge is-remote" id="messagesSourceBadge">Live database</span></h2>
+              <p class="admin-card-sub" style="margin-bottom:0;">Click a message to expand it and mark it read. Unread messages are highlighted.</p>
+            </div>
+            <div class="admin-form-actions" style="padding-top:0;">
+              <button type="button" class="btn btn-ghost" id="btnMarkAllRead" style="padding:9px 16px;font-size:12.5px;">Mark All Read</button>
+              <button type="button" class="btn btn-ghost" id="btnClearMessages" style="padding:9px 16px;font-size:12.5px;">Clear All</button>
+            </div>
+          </div>
+          <div class="list-toolbar">
+            <input type="search" id="msgSearch" placeholder="Search name, email or message…" aria-label="Search messages" maxlength="100">
+            <select id="msgStatusFilter" aria-label="Filter by status">
+              <option value="">All messages</option>
+              <option value="unread">Unread only</option>
+              <option value="read">Read only</option>
+            </select>
+            <select id="msgTypeFilter" aria-label="Filter by project type">
+              <option value="">Any project type</option>
+            </select>
+          </div>
+          <div class="admin-list" id="messagesList"><p class="admin-empty">Loading messages…</p></div>
+          <div class="pager" id="messagesPager"></div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section class="admin-section" id="section-reviews" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Testimonials</h2>
+          <p class="admin-card-sub">Reviews submitted through the "Write a Review" button on your Home page. Approve one and it appears instantly in the testimonial slider — nothing goes live without your OK.</p>
+          <div class="overview-grid" id="reviewStatsGrid"></div>
+        </div>
+
+        <div class="admin-card">
+          <div class="msg-inbox-head">
+            <div>
+              <h2 class="admin-card-title" style="margin-bottom:4px;">All Testimonials</h2>
+              <p class="admin-card-sub" style="margin-bottom:0;">Approve to publish on the Home page, or delete to discard.</p>
+            </div>
+          </div>
+          <div class="admin-list" id="reviewsList"></div>
+        </div>
+      </section>
+
+      <!-- IMAGES -->
+      <section class="admin-section" id="section-images" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Home Page Photo</h2>
+          <p class="admin-card-sub">Used in the Home page hero frame.</p>
+          <div class="image-upload-row">
+            <div class="image-preview" id="previewHomePhoto">No photo</div>
+            <div class="image-upload-actions">
+              <label class="file-input-label">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v9M4 7l4-4 4 4M3 13.5h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Upload Photo
+                <input type="file" accept="image/*" id="uploadHomePhoto">
+              </label>
+              <button type="button" class="btn btn-ghost" id="removeHomePhoto" style="padding:8px 16px;font-size:12.5px;">Remove Photo</button>
+            </div>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">About Page Photo</h2>
+          <p class="admin-card-sub">Used in the About page frame.</p>
+          <div class="image-upload-row">
+            <div class="image-preview" id="previewAboutPhoto">No photo</div>
+            <div class="image-upload-actions">
+              <label class="file-input-label">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v9M4 7l4-4 4 4M3 13.5h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Upload Photo
+                <input type="file" accept="image/*" id="uploadAboutPhoto">
+              </label>
+              <button type="button" class="btn btn-ghost" id="removeAboutPhoto" style="padding:8px 16px;font-size:12.5px;">Remove Photo</button>
+            </div>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Portfolio Thumbnails</h2>
+          <p class="admin-card-sub">Each project's thumbnail image is uploaded from its own entry under Portfolio Projects, so every image can have a different photo.</p>
+          <div class="admin-form-actions"><button type="button" class="btn btn-ghost" data-goto="portfolio">Go to Portfolio Projects</button></div>
+        </div>
+      </section>
+
+      <!-- THEME -->
+      <section class="admin-section" id="section-theme" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Color Theme</h2>
+          <p class="admin-card-sub">Pick a theme and every page on the live site recolors instantly — no page needs to be edited individually.</p>
+          <div class="theme-grid" id="themeGrid"></div>
+        </div>
+      </section>
+
+      <!-- ANALYTICS -->
+      <section class="admin-section" id="section-analytics" hidden>
+
+        <!-- Live now -->
+        <div class="admin-card analytics-live-card">
+          <div class="analytics-live-head">
+            <div class="live-pulse-wrap">
+              <span class="live-pulse-dot"></span>
+              <span class="live-pulse-ring"></span>
+            </div>
+            <div>
+              <h2 class="admin-card-title" style="margin-bottom:2px;">Live Right Now <span class="source-badge" id="analyticsSourceBadge">This device only</span></h2>
+              <p class="admin-card-sub" style="margin:0;">Visitors active on the site in the last 60 seconds.</p>
+            </div>
+            <div class="live-count" id="liveVisitorCount">0</div>
+          </div>
+          <div class="live-visitor-list" id="liveVisitorList"></div>
+          <p class="analytics-scope-note" id="analyticsScopeNote">Tracking is first-party and browser-based — it counts visits made from this device, the same way the rest of this panel's data works. It will not show visits from other people's phones or computers.</p>
+        </div>
+
+        <!-- Range selector -->
+        <div class="analytics-toolbar">
+          <div class="range-pills" id="analyticsRangePills" role="tablist">
+            <button type="button" class="range-pill" data-range="7">7 days</button>
+            <button type="button" class="range-pill is-active" data-range="30">30 days</button>
+            <button type="button" class="range-pill" data-range="90">90 days</button>
+            <button type="button" class="range-pill" data-range="0">All time</button>
+          </div>
+          <button type="button" class="btn btn-ghost" id="btnAnalyticsRefresh" style="padding:9px 16px;font-size:12.5px;">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="margin-right:6px;"><path d="M13.5 8A5.5 5.5 0 1 1 11.9 4.1M13.5 2.5V6H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Refresh
+          </button>
+        </div>
+
+        <!-- KPI cards -->
+        <div class="analytics-kpi-grid">
+          <div class="analytics-kpi">
+            <span class="analytics-kpi-label">Page Views</span>
+            <span class="analytics-kpi-value" id="kpiViews">0</span>
+          </div>
+          <div class="analytics-kpi">
+            <span class="analytics-kpi-label">Sessions</span>
+            <span class="analytics-kpi-value" id="kpiSessions">0</span>
+          </div>
+          <div class="analytics-kpi">
+            <span class="analytics-kpi-label">Pages / Session</span>
+            <span class="analytics-kpi-value" id="kpiPagesPerSession">0</span>
+          </div>
+          <div class="analytics-kpi">
+            <span class="analytics-kpi-label">Bounce Rate</span>
+            <span class="analytics-kpi-value" id="kpiBounce">0%</span>
+          </div>
+          <div class="analytics-kpi">
+            <span class="analytics-kpi-label">Contact Form Leads</span>
+            <span class="analytics-kpi-value" id="kpiLeads">0</span>
+          </div>
+        </div>
+
+        <!-- Traffic over time -->
+        <div class="admin-card">
+          <h2 class="admin-card-title">Traffic Over Time</h2>
+          <p class="admin-card-sub" id="analyticsSeriesSub">Page views per day.</p>
+          <div class="analytics-bar-chart" id="analyticsBarChart"></div>
+          <p class="grid-empty-state" id="analyticsSeriesEmpty" hidden>No page views recorded yet — visit the live site from this browser to start collecting data.</p>
+        </div>
+
+        <div class="analytics-split-grid">
+          <!-- Top pages -->
+          <div class="admin-card">
+            <h2 class="admin-card-title">Top Pages</h2>
+            <div class="analytics-bar-list" id="analyticsTopPages"></div>
+            <p class="grid-empty-state" id="analyticsPagesEmpty" hidden>No data yet.</p>
+          </div>
+
+          <!-- Traffic sources -->
+          <div class="admin-card">
+            <h2 class="admin-card-title">Traffic Sources</h2>
+            <div class="analytics-bar-list" id="analyticsSources"></div>
+            <p class="grid-empty-state" id="analyticsSourcesEmpty" hidden>No data yet.</p>
+          </div>
+
+          <!-- Devices -->
+          <div class="admin-card">
+            <h2 class="admin-card-title">Devices</h2>
+            <div class="analytics-bar-list" id="analyticsDevices"></div>
+            <p class="grid-empty-state" id="analyticsDevicesEmpty" hidden>No data yet.</p>
+          </div>
+
+          <!-- Browsers -->
+          <div class="admin-card">
+            <h2 class="admin-card-title">Browsers</h2>
+            <div class="analytics-bar-list" id="analyticsBrowsers"></div>
+            <p class="grid-empty-state" id="analyticsBrowsersEmpty" hidden>No data yet.</p>
+          </div>
+        </div>
+
+        <!-- Recent activity -->
+        <div class="admin-card">
+          <h2 class="admin-card-title">Recent Activity</h2>
+          <p class="admin-card-sub">The last 40 events recorded on this browser, most recent first.</p>
+          <div class="activity-feed" id="analyticsFeed"></div>
+          <p class="grid-empty-state" id="analyticsFeedEmpty" hidden>Nothing recorded yet.</p>
+        </div>
+
+        <!-- Data controls -->
+        <div class="admin-card">
+          <h2 class="admin-card-title">Data</h2>
+          <p class="admin-card-sub">Analytics data is stored only in this browser, the same as the rest of your site content. Clearing it removes all recorded views and cannot be undone.</p>
+          <div class="admin-form-actions">
+            <button type="button" class="btn btn-ghost" id="btnClearAnalytics" style="padding:9px 16px;font-size:12.5px;">Clear All Analytics Data</button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- SEO -->
+      <section class="admin-section" id="section-seo" hidden>
+
+        <!-- Health score -->
+        <div class="admin-card">
+          <div class="seo-score-head">
+            <div class="seo-score-ring" id="seoScoreRing">
+              <svg viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+                <circle cx="60" cy="60" r="52" class="seo-ring-track"/>
+                <circle cx="60" cy="60" r="52" class="seo-ring-fill" id="seoRingFill"/>
+              </svg>
+              <div class="seo-score-num"><span id="seoScoreValue">0</span><small>/100</small></div>
+            </div>
+            <div class="seo-score-text">
+              <h2 class="admin-card-title">SEO Health Score</h2>
+              <p class="admin-card-sub" id="seoScoreSummary">Checking your site…</p>
+              <div class="seo-score-actions">
+                <button type="button" class="btn btn-ghost" id="btnSeoRecheck" style="padding:9px 16px;font-size:12.5px;">Re-run Check</button>
+                <button type="button" class="btn btn-ghost" id="btnSeoFixJump" style="padding:9px 16px;font-size:12.5px;">Show Issues</button>
+              </div>
+            </div>
+          </div>
+          <div class="seo-check-list" id="seoCheckList"></div>
+        </div>
+
+        <!-- Per-page SEO -->
+        <div class="admin-card">
+          <h2 class="admin-card-title">Page-by-Page SEO</h2>
+          <p class="admin-card-sub">Pick a page, then write the title and description Google will actually show, and add the tags you want that page to rank for. Changes go live on the site instantly.</p>
+
+          <div class="seo-page-pills" id="seoPagePills" role="tablist" aria-label="Choose a page to edit"></div>
+
+          <form class="admin-form" id="formSeoPage">
+            <div>
+              <label for="seoPageTitle">Meta Title <span class="seo-counter" id="seoTitleCounter">0 / 60</span></label>
+              <input type="text" id="seoPageTitle" placeholder="e.g. Web Development Services &amp; Pricing">
+              <p class="admin-inline-hint">Keep it between 20 and 60 characters. Put your most important keyword near the front.</p>
+            </div>
+
+            <div>
+              <label for="seoPageDesc">Meta Description <span class="seo-counter" id="seoDescCounter">0 / 160</span></label>
+              <textarea id="seoPageDesc" rows="3" placeholder="One or two sentences describing this page, written for a human."></textarea>
+              <p class="admin-inline-hint">Aim for 70–160 characters. This is the grey text under your link in search results.</p>
+            </div>
+
+            <div>
+              <label for="seoTagInput">Focus Tags / Keywords</label>
+              <div class="tag-input-wrap" id="seoTagWrap">
+                <div class="tag-chips" id="seoTagChips"></div>
+                <input type="text" id="seoTagInput" class="tag-input" placeholder="Type a tag and press Enter…">
+              </div>
+              <p class="admin-inline-hint">Press Enter or comma to add. Click a tag to remove it. 3–8 tags per page works best.</p>
+              <div class="tag-suggest-row" id="seoTagSuggestions"></div>
+            </div>
+
+            <div class="admin-form-row-group">
+              <div>
+                <label for="seoPageCanonical">Canonical URL (optional)</label>
+                <input type="text" id="seoPageCanonical" placeholder="Leave blank to build it from your Site URL">
+              </div>
+              <div>
+                <label for="seoPagePriority">Sitemap Priority</label>
+                <select id="seoPagePriority">
+                  <option value="1.0">1.0 — Most important</option>
+                  <option value="0.9">0.9 — Very important</option>
+                  <option value="0.8">0.8 — Important</option>
+                  <option value="0.7">0.7 — Normal</option>
+                  <option value="0.6">0.6 — Lower</option>
+                  <option value="0.5">0.5 — Lowest</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="seo-inline-toggle">
+              <label class="switch-toggle" title="Hide this page from search engines">
+                <input type="checkbox" id="seoPageNoindex">
+                <span class="switch-slider"></span>
+              </label>
+              <div>
+                <strong>Hide this page from search engines</strong>
+                <p class="admin-inline-hint" style="margin-top:3px;">Adds a noindex rule and drops the page from your sitemap.</p>
+              </div>
+            </div>
+
+            <div class="image-upload-row">
+              <div class="image-preview" id="previewSeoPageImage">No image</div>
+              <div class="image-upload-actions">
+                <span class="admin-inline-hint" style="margin:0 0 2px;">Share image for this page (1200×630)</span>
+                <label class="file-input-label">
+                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v9M4 7l4-4 4 4M3 13.5h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Upload Image
+                  <input type="file" accept="image/*" id="uploadSeoPageImage">
+                </label>
+                <button type="button" class="btn btn-ghost" id="removeSeoPageImage" style="padding:8px 16px;font-size:12.5px;">Use Site Default</button>
+              </div>
+            </div>
+
+            <div class="admin-form-actions">
+              <button type="submit" class="btn btn-primary">Save Page SEO</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Previews -->
+        <div class="admin-card">
+          <h2 class="admin-card-title">Live Preview</h2>
+          <p class="admin-card-sub">Exactly how this page will look in a Google result and when someone shares the link on WhatsApp, Facebook or X.</p>
+
+          <p class="analytics-section-title">Google Search Result</p>
+          <div class="serp-preview">
+            <div class="serp-head">
+              <span class="serp-favicon" id="serpFavicon">S</span>
+              <span class="serp-site">
+                <span class="serp-brand" id="serpBrand">Sohastics</span>
+                <span class="serp-url" id="serpUrl">https://example.com</span>
+              </span>
+            </div>
+            <a href="#" class="serp-title" id="serpTitle" onclick="return false;">Page title goes here</a>
+            <p class="serp-desc" id="serpDesc">Your meta description will appear here.</p>
+          </div>
+
+          <p class="analytics-section-title">Social Share Card</p>
+          <div class="social-preview">
+            <div class="social-preview-img" id="socialPreviewImg">No share image set</div>
+            <div class="social-preview-body">
+              <span class="social-preview-domain" id="socialPreviewDomain">example.com</span>
+              <h4 class="social-preview-title" id="socialPreviewTitle">Page title goes here</h4>
+              <p class="social-preview-desc" id="socialPreviewDesc">Your meta description will appear here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global settings -->
+        <div class="admin-card">
+          <h2 class="admin-card-title">Site-Wide SEO Settings</h2>
+          <p class="admin-card-sub">These apply to every page and fill in the gaps wherever a page has no setting of its own.</p>
+          <form class="admin-form" id="formSeoGlobal">
+            <div>
+              <label for="seoSiteUrl">Site URL</label>
+              <input type="text" id="seoSiteUrl" placeholder="https://yourdomain.com">
+              <p class="admin-inline-hint">Your live domain, with https:// and no trailing slash. Canonical links, the sitemap and social cards all depend on this.</p>
+            </div>
+
+            <div class="admin-form-row-group">
+              <div><label for="seoBrandName">Brand Name</label><input type="text" id="seoBrandName" placeholder="Sohastics"></div>
+              <div><label for="seoTitleSuffix">Title Suffix</label><input type="text" id="seoTitleSuffix" placeholder="| Sohastics"></div>
+            </div>
+
+            <div>
+              <label for="seoDefaultDesc">Default Description <span class="seo-counter" id="seoDefaultDescCounter">0 / 160</span></label>
+              <textarea id="seoDefaultDesc" rows="3" placeholder="Used on any page that has no description of its own."></textarea>
+            </div>
+
+            <div>
+              <label for="seoGlobalTagInput">Site-Wide Tags</label>
+              <div class="tag-input-wrap" id="seoGlobalTagWrap">
+                <div class="tag-chips" id="seoGlobalTagChips"></div>
+                <input type="text" id="seoGlobalTagInput" class="tag-input" placeholder="Type a tag and press Enter…">
+              </div>
+              <p class="admin-inline-hint">Added to every page's keyword list, after that page's own tags.</p>
+            </div>
+
+            <div class="admin-form-row-group">
+              <div><label for="seoAuthor">Author Name</label><input type="text" id="seoAuthor" placeholder="Sohastics"></div>
+              <div><label for="seoJobTitle">Job Title</label><input type="text" id="seoJobTitle" placeholder="Web Developer &amp; Software Engineer"></div>
+            </div>
+
+            <div class="admin-form-row-group">
+              <div>
+                <label for="seoEntityType">You Are A…</label>
+                <select id="seoEntityType">
+                  <option value="Person">Person (freelancer / individual)</option>
+                  <option value="Organization">Organization (agency / company)</option>
+                </select>
+              </div>
+              <div><label for="seoTwitter">X / Twitter Handle</label><input type="text" id="seoTwitter" placeholder="@yourhandle"></div>
+            </div>
+
+            <div class="admin-form-row-group">
+              <div><label for="seoCity">City</label><input type="text" id="seoCity" placeholder="e.g. Lahore"></div>
+              <div><label for="seoCountry">Country</label><input type="text" id="seoCountry" placeholder="e.g. Pakistan"></div>
+            </div>
+
+            <div>
+              <label for="seoKnowsAbout">Skills &amp; Technologies</label>
+              <input type="text" id="seoKnowsAbout" placeholder="HTML, CSS, JavaScript, React, Next.js, Node.js">
+              <p class="admin-inline-hint">Comma separated. Published as structured data so search engines know what you specialise in.</p>
+            </div>
+
+            <div class="admin-form-row-group">
+              <div>
+                <label for="seoLang">Language</label>
+                <select id="seoLang">
+                  <option value="en">English (en)</option>
+                  <option value="en-GB">English — UK (en-GB)</option>
+                  <option value="ur">Urdu (ur)</option>
+                  <option value="ar">Arabic (ar)</option>
+                  <option value="es">Spanish (es)</option>
+                  <option value="fr">French (fr)</option>
+                  <option value="de">German (de)</option>
+                  <option value="hi">Hindi (hi)</option>
+                </select>
+              </div>
+              <div>
+                <label for="seoChangefreq">Sitemap Update Frequency</label>
+                <select id="seoChangefreq">
+                  <option value="daily">Daily</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="monthly">Monthly</option>
+                  <option value="yearly">Yearly</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="image-upload-row">
+              <div class="image-preview" id="previewSeoDefaultImage">No image</div>
+              <div class="image-upload-actions">
+                <span class="admin-inline-hint" style="margin:0 0 2px;">Default share image (1200×630)</span>
+                <label class="file-input-label">
+                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v9M4 7l4-4 4 4M3 13.5h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Upload Image
+                  <input type="file" accept="image/*" id="uploadSeoDefaultImage">
+                </label>
+                <button type="button" class="btn btn-ghost" id="removeSeoDefaultImage" style="padding:8px 16px;font-size:12.5px;">Remove</button>
+              </div>
+            </div>
+
+            <div class="seo-inline-toggle">
+              <label class="switch-toggle"><input type="checkbox" id="seoRobotsIndex"><span class="switch-slider"></span></label>
+              <div>
+                <strong>Allow search engines to index this site</strong>
+                <p class="admin-inline-hint" style="margin-top:3px;">Turn off only while the site is still being built.</p>
+              </div>
+            </div>
+
+            <div class="seo-inline-toggle">
+              <label class="switch-toggle"><input type="checkbox" id="seoStructuredData"><span class="switch-slider"></span></label>
+              <div>
+                <strong>Publish structured data (Schema.org)</strong>
+                <p class="admin-inline-hint" style="margin-top:3px;">Adds Person, WebSite, WebPage and Breadcrumb markup — strongly recommended.</p>
+              </div>
+            </div>
+
+            <div class="admin-form-actions">
+              <button type="submit" class="btn btn-primary">Save Site-Wide SEO</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Analytics & verification -->
+        <div class="admin-card">
+          <h2 class="admin-card-title">Analytics &amp; Verification</h2>
+          <p class="admin-card-sub">Paste the codes from Google Analytics and Search Console. They are added to every page automatically — no file editing needed.</p>
+          <form class="admin-form" id="formSeoAnalytics">
+            <div>
+              <label for="seoGaId">Google Analytics 4 Measurement ID</label>
+              <input type="text" id="seoGaId" placeholder="G-XXXXXXXXXX">
+              <p class="admin-inline-hint">Found in Analytics under Admin → Data Streams. Starts with "G-".</p>
+            </div>
+            <div><label for="seoGoogleVerify">Google Search Console Verification Code</label><input type="text" id="seoGoogleVerify" placeholder="Paste only the content value, not the whole tag"></div>
+            <div><label for="seoBingVerify">Bing Webmaster Verification Code</label><input type="text" id="seoBingVerify" placeholder="Paste only the content value"></div>
+            <div><label for="seoThemeColor">Browser Theme Color</label><input type="text" id="seoThemeColor" placeholder="#FF5A1F"></div>
+            <div class="admin-form-actions"><button type="submit" class="btn btn-primary">Save Analytics Settings</button></div>
+          </form>
+        </div>
+
+        <!-- Static head tags -->
+        <div class="admin-card">
+          <h2 class="admin-card-title">Static Meta Tags <span class="seo-counter" style="float:none;">optional but recommended</span></h2>
+          <p class="admin-card-sub">The panel already applies every tag above automatically when a page loads. Pasting these into the <code>&lt;head&gt;</code> of the page's HTML file as well makes them visible to crawlers and link previews that don't run JavaScript — WhatsApp and Facebook among them. Currently showing: <strong id="seoSnippetPageName">Home Page</strong>.</p>
+          <pre class="code-output" id="seoHeadSnippet">—</pre>
+          <div class="admin-form-actions">
+            <button type="button" class="btn btn-ghost" id="btnCopySnippet" style="padding:9px 16px;font-size:12.5px;">Copy Tags</button>
+            <button type="button" class="btn btn-ghost" id="btnDownloadSnippet" style="padding:9px 16px;font-size:12.5px;">Download as .txt</button>
+          </div>
+        </div>
+
+        <!-- Sitemap & robots -->
+        <div class="admin-card">
+          <h2 class="admin-card-title">Sitemap &amp; Robots.txt</h2>
+          <p class="admin-card-sub">Generated live from your pages and settings. Download both, upload them to the root folder of your website, then submit the sitemap in Google Search Console.</p>
+
+          <p class="analytics-section-title">sitemap.xml</p>
+          <pre class="code-output" id="seoSitemapOut">—</pre>
+          <div class="admin-form-actions" style="margin-bottom:22px;">
+            <button type="button" class="btn btn-ghost" id="btnCopySitemap" style="padding:9px 16px;font-size:12.5px;">Copy</button>
+            <button type="button" class="btn btn-primary" id="btnDownloadSitemap" style="padding:9px 16px;font-size:12.5px;">Download sitemap.xml</button>
+          </div>
+
+          <p class="analytics-section-title">robots.txt</p>
+          <pre class="code-output" id="seoRobotsOut">—</pre>
+          <div class="admin-form-actions">
+            <button type="button" class="btn btn-ghost" id="btnCopyRobots" style="padding:9px 16px;font-size:12.5px;">Copy</button>
+            <button type="button" class="btn btn-primary" id="btnDownloadRobots" style="padding:9px 16px;font-size:12.5px;">Download robots.txt</button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- PAGE VISIBILITY -->
+      <section class="admin-section" id="section-pages" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Manage Page Visibility</h2>
+          <p class="admin-card-sub">Enable or disable pages on your website. When a page is disabled, its links are hidden from navigation and visitors attempting direct access will see an offline notice.</p>
+          <div class="page-visibility-list" id="pageVisibilityList"></div>
+        </div>
+      </section>
+
+      <!-- MEDIA LIBRARY -->
+      <section class="admin-section" id="section-media" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Media Library</h2>
+          <p class="admin-card-sub">Every image and video uploaded to the site. Files are checked on upload (type, size and content), renamed to a unique name and stored on the server. A file that is still used somewhere on the site can't be deleted until you remove it from there.</p>
+          <div class="list-toolbar">
+            <label class="btn btn-primary file-input-label" style="cursor:pointer;">
+              Upload Files
+              <input type="file" id="mediaUploadInput" accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm,video/quicktime" multiple style="display:none;">
+            </label>
+            <select id="mediaTypeFilter" aria-label="Filter media by type">
+              <option value="">Images &amp; videos</option>
+              <option value="image">Images only</option>
+              <option value="video">Videos only</option>
+            </select>
+            <span class="video-upload-status" id="mediaUploadStatus"></span>
+          </div>
+          <div class="media-grid" id="mediaGrid"><p class="admin-empty">Loading media…</p></div>
+          <div class="pager" id="mediaPager"></div>
+        </div>
+      </section>
+
+      <!-- ACTIVITY LOG -->
+      <section class="admin-section" id="section-activity" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Activity Log</h2>
+          <p class="admin-card-sub">A record of admin actions: sign-ins, content changes, uploads and deleted messages.</p>
+          <div class="admin-list" id="activityList"><p class="admin-empty">Loading activity…</p></div>
+          <div class="pager" id="activityPager"></div>
+        </div>
+      </section>
+
+      <!-- ADMIN PROFILE -->
+      <section class="admin-section" id="section-profile" hidden>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Account Details</h2>
+          <p class="admin-card-sub">The username and email you can sign in with. Signed in as <strong id="profileWho">—</strong>.</p>
+          <form class="admin-form" id="formProfile">
+            <div class="admin-form-row-group">
+              <div><label for="profileUsername">Username</label><input type="text" id="profileUsername" autocomplete="username" maxlength="40" required></div>
+              <div><label for="profileEmail">Email</label><input type="email" id="profileEmail" autocomplete="email" maxlength="120" required></div>
+            </div>
+            <div><label for="profileCurrentPassword">Current password</label><input type="password" id="profileCurrentPassword" autocomplete="current-password" maxlength="200" required><p class="admin-inline-hint">Needed to confirm it's really you before account details change.</p></div>
+            <p class="admin-inline-hint" id="profileMsg" role="status"></p>
+            <div class="admin-form-actions"><button type="submit" class="btn btn-primary">Save Account Details</button></div>
+          </form>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Change Password</h2>
+          <p class="admin-card-sub">Use at least 10 characters with a mix of letters and numbers. Changing your password signs you out everywhere else.</p>
+          <form class="admin-form" id="formChangePassword">
+            <div><label for="currentPassword">Current Password</label><input type="password" id="currentPassword" autocomplete="current-password" required></div>
+            <div class="admin-form-row-group">
+              <div><label for="newPassword">New Password</label><input type="password" id="newPassword" autocomplete="new-password" minlength="10" required></div>
+              <div><label for="confirmPassword">Confirm New Password</label><input type="password" id="confirmPassword" autocomplete="new-password" minlength="10" required></div>
+            </div>
+            <p class="admin-inline-hint" id="settingsMsg" role="status"></p>
+            <div class="admin-form-actions"><button type="submit" class="btn btn-primary">Update Password</button></div>
+          </form>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="admin-section" id="section-settings" hidden>
+        <div class="admin-card" id="backendStatusCard">
+          <h2 class="admin-card-title">Backend Status</h2>
+          <p class="admin-card-sub">Connection to the API and database that store everything you edit here.</p>
+          <div class="backend-status-row" id="backendStatusRow">
+            <span class="backend-status-dot" id="backendStatusDot"></span>
+            <span id="backendStatusText">Checking…</span>
+          </div>
+          <p class="admin-inline-hint" id="backendStatusHint"></p>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Website Name</h2>
+          <p class="admin-card-sub">Updates the logo mark in the header and footer on every page, and the large name on the Home page — instantly, site-wide.</p>
+          <form class="admin-form" id="formSiteName">
+            <div><label for="siteNameInput">Website / Brand Name</label><input type="text" id="siteNameInput" maxlength="40" placeholder="e.g. Sohastics"></div>
+            <div class="admin-form-actions"><button type="submit" class="btn btn-primary">Save Website Name</button></div>
+          </form>
+        </div>
+        <div class="admin-card">
+          <h2 class="admin-card-title">Backup Content</h2>
+          <p class="admin-card-sub">Download everything you've edited — home page text, services, portfolio, awards, about, contact info, theme, page visibility and SEO — as one file. Your live content is already stored in the database; a backup file is an extra safety copy you can keep or use to move the site. Messages and analytics are not included.</p>
+          <div class="admin-form-actions">
+            <button type="button" class="btn btn-primary" id="btnExportContent">Download Backup (.json)</button>
+            <label class="btn btn-ghost file-input-label" style="cursor:pointer;">
+              Restore From Backup
+              <input type="file" accept="application/json,.json" id="importContentFile" style="display:none;">
+            </label>
+          </div>
+          <p class="admin-inline-hint" id="exportImportMsg"></p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<div class="admin-toast" id="adminToast"><span class="admin-toast-dot"></span><span id="adminToastText">Saved</span></div>
+
+<script src="js/api-config.js"></script>
+<script src="js/api-client.js"></script>
+<script src="js/cms.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

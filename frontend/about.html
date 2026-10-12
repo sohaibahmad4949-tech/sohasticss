@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script>(function () { try { var t = localStorage.getItem("ahmedCMS_theme"); if (t) { t = JSON.parse(t); } if (t && t !== "charcoal-orange") { document.documentElement.setAttribute("data-theme", t); } } catch (e) { } })();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Sohastics, Web Developer &amp; Software Engineer</title>
+  <meta name="description"
+    content="The story behind Sohastics — from teaching myself to code on weekends to a full-time career building web products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ================= BACKGROUND AMBIENCE ================= -->
+  <div class="bg-ambience" aria-hidden="true">
+    <span class="blob blob-orange"></span>
+    <span class="blob blob-blue"></span>
+    <span class="blob blob-orange blob-small"></span>
+    <div class="grain"></div>
+  </div>
+
+  <!-- ================= NAV ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">AHMED<span class="logo-dot">.</span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="websites.html">Websites</a>
+        <a href="awards.html">Awards</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-ghost nav-cta">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- ================= PAGE HEADER / NARRATIVE ================= -->
+    <section class="page-header about-header">
+      <div class="section-inner">
+        <p class="eyebrow reveal-item"><span class="eyebrow-dot"></span>MY STORY</p>
+        <h1 class="page-title reveal-item">Started on Weekends. Never Stopped.</h1>
+      </div>
+    </section>
+
+    <section class="about-narrative">
+      <div class="section-inner about-narrative-grid">
+        <div class="about-narrative-copy reveal-item" data-reveal="left">
+          <p>I started editing videos five years ago as a hobby — helping a friend cut down his YouTube uploads on
+            weekends, just to see if I could make them better. I could.</p>
+          <p>Somewhere along the way I fell in love with the craft itself: storytelling through editing, sound design,
+            and colour grading. What started as a favour for a friend turned into a full-time career.</p>
+          <p class="about-highlight">What makes me different is that I don't just cut clips together — I build a
+            narrative that keeps the viewer watching until the very end.</p>
+          <p>My mission is simple: help creators and brands turn raw, unorganised footage into polished stories that
+            actually grow their audience.</p>
+        </div>
+        <div class="about-narrative-frame reveal-item" data-reveal="right">
+          <div class="frame-monitor about-frame">
+            <div class="frame-corner tl"></div>
+            <div class="frame-corner tr"></div>
+            <div class="frame-corner bl"></div>
+            <div class="frame-corner br"></div>
+            <div class="frame-tc">EST. 2019</div>
+            <svg class="headshot-placeholder" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" role="img"
+              aria-label="Placeholder profile photo">
+              <defs>
+                <linearGradient id="abBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#211c19" />
+                  <stop offset="100%" stop-color="#141110" />
+                </linearGradient>
+                <linearGradient id="abPerson" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#3a322c" />
+                  <stop offset="100%" stop-color="#2a2420" />
+                </linearGradient>
+              </defs>
+              <rect width="400" height="500" fill="url(#abBg)" />
+              <circle cx="200" cy="195" r="86" fill="url(#abPerson)" />
+              <path d="M60 520 C60 380 130 320 200 320 C270 320 340 380 340 520 Z" fill="url(#abPerson)" />
+              <circle cx="200" cy="195" r="86" fill="none" style="stroke:var(--blue)" stroke-opacity="0.15"
+                stroke-width="1" />
+            </svg>
+            <div class="frame-scanlines"></div>
+          </div>
+          <p class="frame-caption">Photo placeholder — swap via Admin Panel</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MILESTONE TIMELINE ================= -->
+    <!--- <section class="timeline-section">
+      <div class="section-inner">
+        <div class="section-head reveal-item">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>THE JOURNEY SO FAR</p>
+          <h2 class="section-title">Key Milestones</h2>
+        </div>
+
+        <div class="achievements-timeline milestone-timeline" id="milestoneTimeline">
+          <div class="timeline-spine" aria-hidden="true"><span class="timeline-spine-fill" id="milestoneFill"></span>
+          </div>
+
+          <article class="timeline-item timeline-item--left reveal-item" data-reveal="left">
+            <div class="timeline-node"><span class="timeline-dot"></span></div>
+            <div class="timeline-card">
+              <span class="timeline-year">Year 1</span>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M8 5v14l11-7-11-7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 class="timeline-title">Started Editing as a Hobby</h3>
+              <p class="timeline-desc">Cutting a friend's YouTube uploads on weekends, just to see what I could make
+                better.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item timeline-item--right reveal-item" data-reveal="right">
+            <div class="timeline-node"><span class="timeline-dot"></span></div>
+            <div class="timeline-card">
+              <span class="timeline-year">Year 2</span>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3v4M12 17v4M4.2 6.2l2.8 2.8M17 15l2.8 2.8M3 12h4M17 12h4M4.2 17.8 7 15M17 9l2.8-2.8"
+                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  <circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.6" />
+                </svg>
+              </div>
+              <h3 class="timeline-title">First Paid Client</h3>
+              <p class="timeline-desc">Took on my first paying project and realised this could be more than a hobby.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item timeline-item--left reveal-item" data-reveal="left">
+            <div class="timeline-node"><span class="timeline-dot"></span></div>
+            <div class="timeline-card">
+              <span class="timeline-year">Year 3</span>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 8a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8Z" stroke="currentColor"
+                    stroke-width="1.6" />
+                  <path d="M17 11.5 22 8v10l-5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 class="timeline-title">Crossed 100 Edited Videos</h3>
+              <p class="timeline-desc">Hit the 100-video mark and started refining a real editing workflow.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item timeline-item--right reveal-item" data-reveal="right">
+            <div class="timeline-node"><span class="timeline-dot"></span></div>
+            <div class="timeline-card">
+              <span class="timeline-year">Year 4</span>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect x="3.5" y="5" width="19" height="17" rx="2.4" stroke="currentColor" stroke-width="1.6" />
+                  <path d="M3.5 10h19M8 3v4M18 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M8.5 15l2 2 4-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 class="timeline-title">Started Managing Full Channels</h3>
+              <p class="timeline-desc">Moved from single edits to complete channel management for long-term clients.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item timeline-item--left reveal-item" data-reveal="left">
+            <div class="timeline-node"><span class="timeline-dot"></span></div>
+            <div class="timeline-card">
+              <span class="timeline-year">Year 5</span>
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3.5 14.3 9l6 .6-4.5 4 1.4 5.9L12 16.7 6.8 19.5 8.2 13.6 3.7 9.6l6-.6 2.3-5.5Z"
+                    stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 class="timeline-title">300+ Videos, 50+ Clients</h3>
+              <p class="timeline-desc">Today — 300+ videos edited, 50+ happy clients, and a 4.9 average rating along the
+                way.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>-->
+
+    <!-- ================= SKILLS ================= -->
+    <section class="skills-section">
+      <div class="section-inner">
+        <div class="section-head reveal-item">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>WHAT I BRING TO THE STACK</p>
+          <h2 class="section-title">Core Skills</h2>
+        </div>
+
+        <div class="skills-list reveal-item" id="skillsList">
+          <div class="skill-meter" data-skill-value="95">
+            <div class="skill-meter-head">
+              <span class="skill-name">Video Editing</span>
+              <span class="skill-percent"><span class="skill-percent-num">0</span>%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-meter" data-skill-value="88">
+            <div class="skill-meter-head">
+              <span class="skill-name">Colour Grading</span>
+              <span class="skill-percent"><span class="skill-percent-num">0</span>%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-meter" data-skill-value="85">
+            <div class="skill-meter-head">
+              <span class="skill-name">Sound Design</span>
+              <span class="skill-percent"><span class="skill-percent-num">0</span>%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-meter" data-skill-value="90">
+            <div class="skill-meter-head">
+              <span class="skill-name">Channel Management</span>
+              <span class="skill-percent"><span class="skill-percent-num">0</span>%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-meter" data-skill-value="93">
+            <div class="skill-meter-head">
+              <span class="skill-name">Short-Form Reels</span>
+              <span class="skill-percent"><span class="skill-percent-num">0</span>%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CLOSING CTA ================= -->
+    <section class="closing-cta" id="contact-cta">
+      <div class="section-inner reveal-item">
+        <p class="eyebrow eyebrow-center"><span class="eyebrow-dot"></span>NEXT PROJECT</p>
+        <h2 class="cta-title">Got an idea that needs building?</h2>
+        <p class="cta-sub">Let's talk about what it could become.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          <span>Start a Project</span>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">AHMED<span class="logo-dot">.</span></a>
+        <p>Web Developer &amp; Software Engineer based worldwide. Turning ideas into fast, reliable web experiences.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="websites.html">Websites</a>
+        <a href="awards.html">Awards</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="services.html">Website Development</a>
+        <a href="services.html">Web Applications</a>
+        <a href="services.html">API &amp; Backend</a>
+        <a href="services.html">Maintenance &amp; Support</a>
+      </div>
+      <div class="footer-social">
+        <h4>Follow</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="YouTube" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <rect x="2.5" y="5.5" width="19" height="13" rx="4" stroke="currentColor" stroke-width="1.6" />
+              <path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="LinkedIn" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="8" cy="8.5" r="1.1" fill="currentColor" />
+              <path d="M8 11v6M12 11v6M12 13.5c0-1.5 1-2.5 2.3-2.5S16.5 12 16.5 13.5V17" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 <span class="site-copyright-name">Ahmed</span>. All rights reserved.</span>
+      <span class="footer-tc" id="footerClock">TIMECODE 00:00:00:00</span>
+    </div>
+  </footer>
+
+  <script src="js/api-config.js"></script>
+  <script src="js/api-client.js"></script>
+  <script src="js/cms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

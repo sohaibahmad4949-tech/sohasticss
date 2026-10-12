@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script>(function () { try { var t = localStorage.getItem("ahmedCMS_theme"); if (t) { t = JSON.parse(t); } if (t && t !== "charcoal-orange") { document.documentElement.setAttribute("data-theme", t); } } catch (e) { } })();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Sohastics, Web Developer &amp; Software Engineer</title>
+  <meta name="description"
+    content="Selected web development work by Sohastics — web applications, landing pages, and e-commerce &amp; backend systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ================= BACKGROUND AMBIENCE ================= -->
+  <div class="bg-ambience" aria-hidden="true">
+    <span class="blob blob-orange"></span>
+    <span class="blob blob-blue"></span>
+    <span class="blob blob-orange blob-small"></span>
+    <div class="grain"></div>
+  </div>
+
+  <!-- ================= NAV ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">AHMED<span class="logo-dot">.</span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="websites.html">Websites</a>
+        <a href="awards.html">Awards</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-ghost nav-cta">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="page-header">
+      <div class="section-inner">
+        <p class="eyebrow reveal-item"><span class="eyebrow-dot"></span>SELECTED WORK</p>
+        <h1 class="page-title reveal-item">Full Portfolio</h1>
+        <p class="page-sub reveal-item">Every project below is real client work, carefully selected to showcase how I
+          approach design, development, and delivering results.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= FILTER TABS ================= -->
+    <section class="portfolio-filters">
+      <div class="section-inner">
+        <div class="filter-tabs reveal-item" id="filterTabs" role="tablist" aria-label="Filter portfolio by category">
+          <button class="filter-tab is-active" data-filter="all" role="tab" aria-selected="true">All Work</button>
+          <button class="filter-tab" data-filter="longform" role="tab" aria-selected="false">Web Applications</button>
+          <button class="filter-tab" data-filter="reels" role="tab" aria-selected="false">Landing Pages</button>
+          <button class="filter-tab" data-filter="color" role="tab" aria-selected="false">E-commerce &amp;
+            Backend</button>
+          <span class="filter-pill" id="filterPill" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECT GRID ================= -->
+    <section class="portfolio-grid-section">
+      <div class="section-inner">
+        <div class="portfolio-grid" id="portfolioGrid">
+
+          <!-- LongForm -->
+          <button class="project-card reveal-item" data-category="longform" style="--tone:var(--blue)"
+            data-title="The Making of Northfare" data-tc="18:42"
+            data-desc="A 20-minute behind-the-scenes documentary edit for a product launch — structured raw interviews and B-roll into a three-act story."
+            data-tag="YouTube LongForm">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">18:42</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">The Making of Northfare</span>
+              <span class="project-desc">Documentary edit &amp; interview structuring</span>
+            </span>
+          </button>
+
+          <button class="project-card reveal-item" data-category="longform" style="--tone:var(--blue)"
+            data-title="Field Notes — Episode 12" data-tc="24:10"
+            data-desc="Weekly vlog edit for a travel creator — paced the narration, synced multi-cam footage, and built a consistent intro sequence."
+            data-tag="YouTube LongForm">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">24:10</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Field Notes — Episode 12</span>
+              <span class="project-desc">Weekly vlog edit &amp; multi-cam sync</span>
+            </span>
+          </button>
+
+          <button class="project-card reveal-item" data-category="longform" style="--tone:var(--blue)"
+            data-title="Founder Interview Series" data-tc="15:03"
+            data-desc="Four-part interview series for a startup — cut down two-hour raw conversations into tight, quotable long-form episodes."
+            data-tag="YouTube LongForm">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">15:03</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Founder Interview Series</span>
+              <span class="project-desc">Long-form interview cut &amp; pacing</span>
+            </span>
+          </button>
+
+          <button class="project-card reveal-item" data-category="longform" style="--tone:var(--blue)"
+            data-title="Edit Like a Pro — Tutorial" data-tc="12:27"
+            data-desc="Screen-recorded tutorial edit — added motion graphics call-outs and tightened dead air without losing the teaching flow."
+            data-tag="YouTube LongForm">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">12:27</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Edit Like a Pro — Tutorial</span>
+              <span class="project-desc">Tutorial edit with motion call-outs</span>
+            </span>
+          </button>
+
+          <!-- Reels -->
+          <button class="project-card reveal-item" data-category="reels" style="--tone:var(--orange)"
+            data-title="Loomlight Launch Reels" data-tc="0:28"
+            data-desc="A batch of five vertical launch teasers — fast cuts, on-screen captions, and pattern-interrupt hooks in the first second."
+            data-tag="Short-Form Reels">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">0:28</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Loomlight Launch Reels</span>
+              <span class="project-desc">Vertical teaser batch, hook-first cuts</span>
+            </span>
+          </button>
+
+          <button class="project-card reveal-item" data-category="reels" style="--tone:var(--orange)"
+            data-title="Daily Vlog Shorts" data-tc="0:41"
+            data-desc="Repurposed long-form vlog footage into daily shorts — trimmed for retention and added captions styled to the creator's brand."
+            data-tag="Short-Form Reels">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">0:41</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Daily Vlog Shorts</span>
+              <span class="project-desc">Long-form repurposed into daily shorts</span>
+            </span>
+          </button>
+
+          <button class="project-card reveal-item" data-category="reels" style="--tone:var(--orange)"
+            data-title="Velvet & Co. TikTok Push" data-tc="0:33"
+            data-desc="A month-long TikTok content push — six reels edited to trend-native pacing, timed cuts, and native-feeling transitions."
+            data-tag="Short-Form Reels">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">0:33</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Velvet &amp; Co. TikTok Push</span>
+              <span class="project-desc">Trend-paced TikTok campaign edit</span>
+            </span>
+          </button>
+
+          <button class="project-card reveal-item" data-category="reels" style="--tone:var(--orange)"
+            data-title="Behind the Scenes — Arc" data-tc="0:52"
+            data-desc="Raw set footage turned into a punchy behind-the-scenes reel — synced to a trending audio cue with quick whip-pan transitions."
+            data-tag="Short-Form Reels">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">0:52</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Behind the Scenes — Arc</span>
+              <span class="project-desc">Set footage cut to a trending audio cue</span>
+            </span>
+          </button>
+
+          <!-- Color / Sound -->
+          <button class="project-card reveal-item" data-category="color" style="--tone:var(--blue)"
+            data-title="Palette Media Showreel Grade" data-tc="02:05"
+            data-desc="Full colour grade for an agency showreel — built a consistent LUT and matched shots from six different cameras."
+            data-tag="Colour Grading & Sound Design">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">02:05</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Palette Media Showreel Grade</span>
+              <span class="project-desc">Colour grade &amp; multi-camera match</span>
+            </span>
+          </button>
+
+          <button class="project-card reveal-item" data-category="color" style="--tone:var(--orange)"
+            data-title="Field Notes Podcast Mix" data-tc="41:16"
+            data-desc="Full audio pass on a weekly podcast — dialogue clean-up, noise reduction, and a mastered mix ready for every platform."
+            data-tag="Colour Grading & Sound Design">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">41:16</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Field Notes Podcast Mix</span>
+              <span class="project-desc">Dialogue clean-up &amp; mastered mix</span>
+            </span>
+          </button>
+
+          <button class="project-card reveal-item" data-category="color" style="--tone:var(--blue)"
+            data-title="Midnight Run — Music Video Grade" data-tc="03:22"
+            data-desc="Moody cinematic grade for an independent music video — pushed shadows and split-toned the palette to match the track."
+            data-tag="Colour Grading & Sound Design">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">03:22</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Midnight Run — Music Video Grade</span>
+              <span class="project-desc">Cinematic grade &amp; split-tone palette</span>
+            </span>
+          </button>
+
+          <button class="project-card reveal-item" data-category="color" style="--tone:var(--orange)"
+            data-title="Short Film Sound Design" data-tc="09:47"
+            data-desc="Built a full sound design layer for an independent short — foley, ambience beds, and a mix that carries the tension scene to scene."
+            data-tag="Colour Grading & Sound Design">
+            <span class="project-thumb">
+              <span class="thumb-corner tl"></span><span class="thumb-corner br"></span>
+              <span class="thumb-play"><svg width="20" height="20" viewBox="0 0 18 18" fill="none">
+                  <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+                </svg></span>
+              <span class="thumb-tc">09:47</span>
+            </span>
+            <span class="project-info">
+              <span class="project-title">Short Film Sound Design</span>
+              <span class="project-desc">Foley, ambience &amp; scene-to-scene mix</span>
+            </span>
+          </button>
+
+        </div>
+
+        <p class="grid-empty-state" id="gridEmptyState" hidden>No projects in this category yet — check back soon.</p>
+      </div>
+    </section>
+
+    <!-- ================= CLOSING CTA ================= -->
+    <section class="closing-cta" id="contact-cta">
+      <div class="section-inner reveal-item">
+        <p class="eyebrow eyebrow-center"><span class="eyebrow-dot"></span>NEXT PROJECT</p>
+        <h2 class="cta-title">Like what you see?</h2>
+        <p class="cta-sub">Let's talk about your project and what it could become.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          <span>Start a Project</span>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= LIGHTBOX ================= -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-panel">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M4 4l10 10M14 4 4 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="lightbox-media" id="lightboxMedia">
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+        <span class="lightbox-play"><svg width="26" height="26" viewBox="0 0 18 18" fill="none">
+            <path d="M6 4.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+          </svg></span>
+        <span class="lightbox-tc" id="lightboxTc">00:00</span>
+      </div>
+      <div class="lightbox-body">
+        <p class="eyebrow" id="lightboxTag"><span class="eyebrow-dot"></span>CATEGORY</p>
+        <h3 id="lightboxTitle">Project Title</h3>
+        <p id="lightboxDesc">Project description goes here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">AHMED<span class="logo-dot">.</span></a>
+        <p>Web Developer &amp; Software Engineer based worldwide. Turning ideas into fast, reliable web experiences.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="websites.html">Websites</a>
+        <a href="awards.html">Awards</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="portfolio.html">Web Applications</a>
+        <a href="portfolio.html">Landing Pages</a>
+        <a href="portfolio.html">E-commerce</a>
+        <a href="portfolio.html">Backend Systems</a>
+      </div>
+      <div class="footer-social">
+        <h4>Follow</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="YouTube" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <rect x="2.5" y="5.5" width="19" height="13" rx="4" stroke="currentColor" stroke-width="1.6" />
+              <path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="LinkedIn" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="8" cy="8.5" r="1.1" fill="currentColor" />
+              <path d="M8 11v6M12 11v6M12 13.5c0-1.5 1-2.5 2.3-2.5S16.5 12 16.5 13.5V17" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 <span class="site-copyright-name">Ahmed</span>. All rights reserved.</span>
+      <span class="footer-tc" id="footerClock">TIMECODE 00:00:00:00</span>
+    </div>
+  </footer>
+
+  <script src="js/api-config.js"></script>
+  <script src="js/api-client.js"></script>
+  <script src="js/cms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
